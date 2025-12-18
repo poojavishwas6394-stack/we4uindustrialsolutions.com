@@ -1,0 +1,437 @@
+
+<!--**************************************************************************************-->
+<html>
+
+
+<style>
+/* ======= FIXED TOP BAR ======= */
+.fixed-top-bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: lavender;
+    padding: 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 9999; /* ensures no effect on bottom code */
+   
+}
+
+/* ======= LOGO LEFT SIDE ======= */
+.ftb-logo {
+    height: 70px;
+}
+
+/* ======= CENTER BUTTONS ======= */
+.ftb-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: left;
+    text_size: 15px;
+    width: auto;
+   align-items: center;
+ margin-right: 30px;
+}
+
+.ftb-btn {
+    background: linear-gradient(45deg, #a8d8ff, #4fa9ff);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    justify-content: flex-end;
+    
+}
+
+.ftb-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* ======= RIGHT SIDE ANIMATED NAME ======= */
+<!--.ftb-name {-->
+    <!--font-size: 22px;-->
+
+   <!-- font-weight: bold;-->
+
+   <!-- animation: popUpAnim 1.6s infinite ease-in-out;-->
+
+  <!--  text-align: center;-->
+
+}
+
+/* Animation */
+@keyframes popUpAnim {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.25); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.6; }
+}
+
+/* Add top space so bottom code is not hidden under fixed bar */
+.body-gap {
+    margin-top: 120px;
+}
+</style>
+
+<!-- ======= FIXED TOP BAR HTML ======= -->
+<div class="fixed-top-bar">
+
+    <!-- Left: LOGO -->
+    <img src="we4u.png" class="ftb-logo" alt="Logo">
+
+    <!-- Center: BUTTONS -->
+    <div class="ftb-buttons">
+        <a href="index.html" class="ftb-btn">HOME</a>
+        <a href="web_about1.html" class="ftb-btn">ABOUT</a>
+        <a href="web_service2.html" class="ftb-btn">SERVICES & PRODUCTS</a>
+        <a href="web_pro1.html" class="ftb-btn">PROJECTS</a>
+        <a href="web_client.html" class="ftb-btn">CLIENTS</a>
+         <a href="web_team.html" class="ftb-btn">TEAM</a>
+
+
+
+    </div>
+
+    <!-- Right: Animated Name -->
+    <!--<div class="ftb-name">WE4U INDUSTRIAL SOLUTIONS</div>-->
+
+</div>
+
+<!-- Gap so your bottom code is safe -->
+<div class="body-gap"></div>
+
+
+<!--***************************************************************************************-->
+<!-- Fixed Animated Text (Top Right) -->
+<div class="fixed-animated-text">WE4U INDUSTRIAL SOLUTIONS</div>
+
+<style>
+.fixed-animated-text{
+  position: fixed;
+  top: 8px;             /* Distance from top */
+  right: 30px;           /* Distance from right */
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  z-index: 9999;         /* Always on top */
+
+  /* Continuous Animation */
+  animation: textAnim 1.8s infinite ease-in-out;
+}
+
+/* Keyframes for repeating animation */
+@keyframes textAnim {
+  0%{
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100%{
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+</style>
+
+<!--******************************************************************************-->
+
+<div style="margin-top: 80px;">
+
+<!--*********************************************************************************************************************-->
+<!--<h style= "font-size: 40px; text-align: center;">WE4U INDUSTRIAL SOLUTIONS</h>-->   
+</style>
+
+<p style= "font-size: 20px; text-align: center; line-height: 70px margin-bottom: 20px"></p>
+
+
+<!-- *************************************************images****************************************************************************-->
+
+
+<style>
+
+.container {
+    display: flex;
+    gap: 40px;
+    margin: 20px;
+}
+
+.left-images img {
+    display: block;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+.right-text {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: arial;       /* FIXED – matching font for all text */
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE IMAGES -->
+    <div class="left-images">
+        <img src="auto.png" alt="pic1">
+        <img src="imcc.jpg" alt="pic2">
+        <img src="vfd2.jpg" alt="pic3">
+        <img src="instru.png" alt="pic4">
+    </div>
+
+    <!-- RIGHT SIDE TEXT -->
+    <div class="right-text">
+
+<div style="max-width: 900px; margin: auto; background: lavenderblush; padding: 30px; border-radius: 15px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);">
+  
+<h2><b>WE4U INDUSTRIAL SOLUTIONS</b></h2>
+<p style="color: midnightblue;">
+WE4U Industrial Solutions is a trusted provider of automation, electrical, and instrumentation services. We help industries improve their process, reduce downtime, and run their systems smoothly. Our team provides reliable solutions that match customer needs and support them at every step. We focus on quality, safety, and timely project delivery. We provide complete industrial solutions including Process Automation, Industrial Automation, Electrical Panels, and Instrumentation Services. We also support existing systems and help in upgrading old equipment. Our engineering team works to reduce downtime and increase plant efficiency. We offer IIOT solutions, VFD panels, IMCC panels, EPCC turnkey solutions, and many custom services based on company requirements.
+</p>
+</div>
+
+<div style="max-width: 900px; margin: auto; background: lavender; padding: 30px; border-radius: 15px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);">
+<h2><b>Our Mission</b></h2>
+<p style="color: midnightblue;">“We deliver solutions that are fully aligned with client needs, ensuring complete satisfaction at every stage of the project.Every solution we provide is customized to meet the unique expectations of our clients, ensuring quality, reliability, and satisfaction.Client satisfaction is our highest priority, and we design every service and solution to exceed their expectations.We believe in delivering customer-focused solutions that not only solve challenges but also create long-term value and satisfaction.Our approach is centered on understanding client requirements deeply and delivering solutions that ensure their absolute satisfaction."</p>
+</div>
+
+<div style="max-width: 900px; margin: auto; background: lightcyan; padding: 30px; border-radius: 15px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2);">
+
+<h3><b>Our Vision</b></h3>  <!-- FIXED the bold tag -->
+
+<p style="color: midnightblue;">
+Our company is dedicated to delivering innovative, reliable, and high-quality industrial solutions that meet the evolving needs of our clients. We focus on providing future-ready, best-in-class solutions that are sustainable and efficient, ensuring that our clients can achieve operational excellence and long-term growth. We are committed to offering exceptional customer support, addressing client requirements with dedication and professionalism. Our goal is to not only provide technological and industrial solutions but also to serve as a trusted partner, helping our clients overcome challenges and achieve their business objectives. Equally important is our commitment to our employees and associates. We aim to provide a healthy and empowering work environment, fostering personal and professional growth, collaboration, and long-term success for all stakeholders in a mutually beneficial manner.
+</p>
+
+</div>
+
+</div>
+</div>
+<!--*************************************************************************************************************************************************-->
+
+</body>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- New Page Section at Bottom -->
+<div class="page page-establishment-side">
+  <div class="content-container">
+    <!-- Left Side: Establishment Text -->
+    <div class="text-side">
+      <h1><b>🏢Established..</b></h1>
+      <p>WE4U Industrial Solution, established on <b>11 July 2023</b>, is a dedicated and growing provider in the field of Electrical and Automation Supply Services. We specialize in delivering high-quality electrical components, automation equipment, industrial tools, and customized solutions that support efficient and reliable industrial operations.
+      </p>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="image-side">
+      <img src="indus.png" alt="Company Image">
+    </div>
+  </div>
+</div>
+
+<!-- CSS for this section -->
+<style>
+  .page-establishment-side {
+    padding: 70px 20px;
+    background-color: #f2f8fc;
+  }
+
+  .content-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .text-side {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+  }
+
+  .text-side h1 {
+    font-size: 32px;
+    color: #1a3f6b;
+    margin-bottom: 20px;
+  }
+
+  .text-side p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .image-side {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .image-side img {
+    width: 100%;
+    max-width: 700px;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column-reverse;
+    }
+
+    .image-side, .text-side {
+      padding: 10px;
+    }
+  }
+</style>
+
+<!--*****************************************************************************************************************************************-->
+
+<!--*************************************************************************************************************************************************-->
+<!-- Next Page Button (Place anywhere in your HTML) -->
+<style>
+  /* Container to isolate the button */
+  #next-page-btn-container {
+    position: fixed;       /* Fix at viewport */
+    bottom: 20px;          /* Distance from bottom */
+    right: 20px;           /* Distance from right */
+    z-index: 9999;         /* Stay on top of other elements */
+  }
+
+  /* Small button styling */
+  #next-page-btn {
+    padding: 5px 10px;
+    font-size: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 50px;
+  }
+
+  #next-page-btn:hover {
+    background-color: #45a049;
+  }
+</style>
+<!--*****************************************************************************************-->
+<div id="next-page-btn-container">
+  <button id="next-page-btn" onclick="window.location.href='web_service2.html'">
+    Our Services
+  </button>
+</div>
+
+</style>
+<!-- ======= END FOOTER ======= -->
+<!--*****************************************************************************************************************************************************-->
+
+</html>
+<!--*****************************************************************************************************************************************************-->
+<a href="web_service2.html" 
+   style="
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      font-size: 40px;
+      text-decoration: none;
+      color: blue;
+      cursor: pointer;
+   ">
+   &#8594;
+</a>
+<!--*****************************************************************************************************-->
+<!-- Left Arrow for Previous Page -->
+<a href="index.html" 
+   style="position: fixed; left: 20px; top: 50%; transform: translateY(-50%);
+          font-size: 40px; text-decoration: none; color: blue; z-index: 9999;">
+    &#8592;
+</a>
+</html>
+
+
+
+<!--******************************************footer**********************************************-->
+<!-- ======= SAFE FIXED FOOTER (FULLY SEPARATE) ======= -->
+<!-- ======= SAFE FIXED FOOTER (FULLY SEPARATE) ======= -->
+<div class="myFooterBox">
+    <div class="myFooterContent">
+        <!--<h4>Your Company Name</h4>-->
+
+        <div class="myFooterLinks">
+            <a href="index.html">Home</a>
+            <a href="web_about1.html">About</a>
+            <a href="web_service2.html">Services & Products</a>
+            <a href="web_pro1.html">Projects</a>
+            <a href="web_client.html">Clients</a>
+            <a href="Web_team.html">Team</a>
+        </div>
+       <p><b>Email: saleswe4u@outlook.com | Phone: +91 73033 87634, +91 73835 96544</b></p>
+       <p style:"color: blue;"><b>Location:</b> First Floor,B-108,Transport Nagar,Sector-69,Noida(U.P)</p>
+    </div>
+</div>
+
+<style>
+.myFooterBox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    /* 🔵 Light Blue Animated Background */
+    background: linear-gradient(90deg, #b3e5ff, #e7f9ff, #b3e5ff);
+    background-size: 300% 300%;
+    animation: myFooterAnim 5s infinite alternate;
+
+    /* 🔧 Footer Height (YOU CAN CHANGE THIS) */
+    padding: -10px 0;  /* Change this to make footer small or large */
+
+    text-align: center;
+    z-index: 999999; 
+    <!--font-family: Arial, sans-serif;-->
+    font-size: 8px;
+}
+
+@keyframes myFooterAnim {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.myFooterContent h4 {
+    margin: -10px 0;
+    font-size: 12px;
+    color: #003355;
+}
+
+.myFooterLinks a {
+    margin: 0 2px;
+    text-decoration: none;
+    color: #003355;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.myFooterContent p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #002233;
+}
+
+
+<!--======================================================================================================================================-->

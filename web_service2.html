@@ -1,0 +1,727 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+/* ======= FIXED TOP BAR ======= */
+.fixed-top-bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: lavender;
+    padding: 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 9999; /* ensures no effect on bottom code */
+   
+}
+
+/* ======= LOGO LEFT SIDE ======= */
+.ftb-logo {
+    height: 70px;
+}
+
+/* ======= CENTER BUTTONS ======= */
+.ftb-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: left;
+    text_size: 15px;
+    width: auto;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.ftb-btn {
+    background: linear-gradient(45deg, #a8d8ff, #4fa9ff);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    justify-content: flex-end;
+    
+}
+
+.ftb-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* ======= RIGHT SIDE ANIMATED NAME ======= */
+<!--.ftb-name {-->
+    <!--font-size: 22px;-->
+
+   <!-- font-weight: bold;-->
+
+   <!-- animation: popUpAnim 1.6s infinite ease-in-out;-->
+
+  <!--  text-align: center;-->
+
+}
+
+/* Animation */
+@keyframes popUpAnim {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.25); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.6; }
+}
+
+/* Add top space so bottom code is not hidden under fixed bar */
+.body-gap {
+    margin-top: 120px;
+}
+</style>
+
+<!-- ======= FIXED TOP BAR HTML ======= -->
+<div class="fixed-top-bar">
+
+    <!-- Left: LOGO -->
+    <img src="we4u.png" class="ftb-logo" alt="Logo">
+
+    <!-- Center: BUTTONS -->
+    <div class="ftb-buttons">
+        <a href="index.html" class="ftb-btn">HOME</a>
+        <a href="web_about1.html" class="ftb-btn">ABOUT</a>
+        <a href="web_service2.html" class="ftb-btn">SERVICES & PRODUCTS</a>
+        <a href="web_pro1.html" class="ftb-btn">PROJECTS</a>
+        <a href="web_client.html" class="ftb-btn">CLIENTS</a>
+         <a href="web_team.html" class="ftb-btn">TEAM</a>
+
+    </div>
+
+    <!-- Right: Animated Name -->
+    <!--<div class="ftb-name">WE4U INDUSTRIAL SOLUTIONS</div>-->
+
+</div>
+
+<!-- Gap so your bottom code is safe -->
+<div class="body-gap"></div>
+
+
+
+
+<!--*********************************************************************************************************************************-->
+
+
+
+
+<!--*********************************************************************************************************************************-->
+
+<!-- Fixed Animated Text (Top Right) -->
+<div class="fixed-animated-text">WE4U INDUSTRIAL SOLUTIONS</div>
+
+<style>
+.fixed-animated-text{
+  position: fixed;
+  top: 10px;             /* Distance from top */
+  right: 20px;           /* Distance from right */
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  z-index: 9999;         /* Always on top */
+
+  /* Continuous Animation */
+  animation: textAnim 1.8s infinite ease-in-out;
+}
+
+/* Keyframes for repeating animation */
+@keyframes textAnim {
+  0%{
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100%{
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+</style>
+
+<!--*********************************************************************************************************************************-->
+<h1 style="text-align: center; color: midnightblue; font-size: 40px; font-family: puppins; margin-top: 60px;"><b>Our Services</b></h1>
+
+
+<!-- =================== SEPARATE BLOCK : MULTIPLE IMAGES + TEXT BELOW =================== -->
+
+<div style="
+  width: 95%;
+  margin: 20px 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+">
+
+  <!-- === 1st Box === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+
+  ">
+    <img src="pa.png" style="width:100%; border-radius:10px;">
+    <h3 style="color:green; margin-top:30px;">Process Automation</h3>
+     <!--<p style="font-size:14px; color:#333;">
+      We provide top-quality automation solutions for all industries.</p>-->
+     <!--<p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+  </div>
+
+  <!-- === 2nd Box === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+  ">
+    <img src="ia.jpeg" style="width:100%; border-radius:10px; height:150px;">
+    <h3 style="color:green; margin-top:10px;">Industrial Automation</h3>
+     <!--<p style="font-size:14px; color:#333;">
+      Complete industrial automation with modern technology.    </p>-->
+
+     <!--<p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+  </div>
+
+  <!-- === 3rd Box === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+  ">
+    <img src="instru.jpeg" style="width:100%; border-radius:10px; height:150px;">
+    <h3 style="color:green; margin-top:10px;">Instrumentation Supply & Service Support</h3>
+     <!--<p style="font-size:14px; color:#333;">
+      Reliable instrumentation supply and support for all plants.</p>-->
+ <!--<p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+ </div>
+
+  <!-- === 4th Box === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+  ">
+    <img src="abb.jpeg" style="width:100%; border-radius:10px; height:150px;">
+    <h3 style="color:green; margin-top:10px;">Support for Existing Systems</h3>
+     <!--<p style="font-size:14px; color:#333;">
+      Expert IMCC, LT, VFD electrical panel solutions. </p>-->
+     <!--<p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+
+  </div>
+  <!-- === 5th Box (Optional, you can add more) === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+  ">
+    <img src="sol.jpeg" style="width:100%; border-radius:10px; height:150px;">
+    <h3 style="color:green; margin-top:10px;">Provide Solutions To Industrial Challenges</h3>
+     <!--<p style="font-size:14px; color:#333;">
+      24/7 maintenance, troubleshooting & support services. </p>-->
+     <!--<p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+
+  </div>
+
+<!-- === 6th Box (Optional, you can add more) === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+  ">
+    <img src="control.jpeg" style="width:100%; border-radius:10px; height:150px;">
+    <h3 style="color:green; margin-top:10px;">Control System Service Support</h3>
+     <!--<p style="font-size:14px; color:#333;">
+      24/7 maintenance, troubleshooting & support services.</p>-->
+     <!--<p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+  </div>
+
+
+<!-- === 7th Box (Optional, you can add more) === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+  ">
+    <img src="iiot.jpeg" style="width:100%; border-radius:10px; height:150px;">
+    <h3 style="color:green; margin-top:10px;">IIOT Solutions</h3>
+     <!--<p style="font-size:14px; color:#333;">
+      24/7 maintenance, troubleshooting & support services.</p>-->
+     <!--<p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+  </div>
+
+<!-- === 8th Box (Optional, you can add more) === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+  ">
+    <img src="imcc.jpeg" style="width:100%; border-radius:10px;height:150px;">
+    <h3 style="color:green; margin-top:10px;">Electrical Solutions – LT, IMCC, VFD</h3>
+     <!--<p style="font-size:14px; color:#333;">
+      24/7 maintenance, troubleshooting & support services. </p>-->
+     <!--<p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+
+  </div>
+
+<!-- === 9th Box (Optional, you can add more) === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+  ">
+    <img src="turnkey.jpeg" style="width:100%; border-radius:10px; height:150px;">
+    <h3 style="color:green; margin-top:10px;">EPCC Turnkey Solutions</h3>
+     <!--<p style="font-size:14px; color:#333;">
+      24/7 maintenance, troubleshooting & support services.</p>-->
+     <!--<p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+
+  </div>
+
+<!-- === 10th Box (Optional, you can add more) === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+  ">
+    <img src="main.jpeg" style="width:100%; border-radius:10px; height:150px;">
+    <h3 style="color:green; margin-top:8px;">Maintenance & Troubleshooting</h3>
+    <!--<p style="font-size:14px; color:#333;">
+      24/7 maintenance, troubleshooting & support services.</p>-->
+    <!-- <p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+
+  </div>
+
+<!-- === 11th Box (Optional, you can add more) === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+  ">
+    <img src="plc.jpeg" style="width:100%; border-radius:10px; height:150px;">
+    <h3 style="color:green; margin-top:10px;">PLC & SCADA Integration</h3>
+     <!--<p style="font-size:14px; color:#333;">
+      24/7 maintenance, troubleshooting & support services.</p>-->
+     <!--<p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+
+  </div>
+
+
+<!-- === 12th Box (Optional, you can add more) === -->
+  <div style="
+    width: 250px;
+    background: #f5fbff;
+    border-radius: 12px;
+    border: 2px solid #c2e3ff;
+    padding: 10px;
+    text-align: center;
+  ">
+    <img src="analy.jpeg" style="width:100%; border-radius:10px; height:150px;">
+    <h3 style="color:green; margin-top:10px;">Analysis Processes</h3>
+     <!--<p style="font-size:14px; color:#333;">
+      24/7 maintenance, troubleshooting & support services.</p>-->
+    <!--<p style="font-weight:bold; color:blue;">📞 Call: +91 9876543210</p>-->
+  </div>
+
+
+
+
+<!-- =================== END OF BLOCK =================== -->
+<!--*********************************************************************************************************************-->
+
+
+<!--**********************************************************************************************************************************************************-->
+<!--********************************************************************************************-->
+<!--*****************************************************************************************************************************************************-->
+
+<!--*****************************************************************************************************-->
+<!-- Left Arrow for Previous Page -->
+<a href="web_pro1.html" 
+   style="position: fixed; left: 20px; top: 50%; transform: translateY(-50%);
+          font-size: 40px; text-decoration: none; color: blue; z-index: 9999;">
+    &#8592;
+</a>
+
+<!--*****************************************************************************************************************************************************-->
+
+<!--*****************************************************************************************************-->
+</html>
+<!--*****************************************************************************************************************************************************-->
+<a href="web_pro1.html" 
+   style="
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      font-size: 40px;
+      text-decoration: none;
+      color: blue;
+      cursor: pointer;
+   ">
+   &#8594;
+</a>
+
+
+
+
+
+
+<!--*****************************************************************************************************-->
+<!-- Left Arrow for Previous Page -->
+<a href="web_about1.html" 
+   style="position: fixed; left: 20px; top: 50%; transform: translateY(-50%);
+          font-size: 40px; text-decoration: none; color: blue; z-index: 9999;">
+    &#8592;
+</a>
+</html>
+
+
+
+<!--******************************************footer**********************************************-->
+<!-- ======= SAFE FIXED FOOTER (FULLY SEPARATE) ======= -->
+<!-- ======= SAFE FIXED FOOTER (FULLY SEPARATE) ======= -->
+<div class="myFooterBox">
+    <div class="myFooterContent">
+        <!--<h4>Your Company Name</h4>-->
+
+        <div class="myFooterLinks">
+            <a href="index.html">Home</a>
+            <a href="web_about1.html">About</a>
+            <a href="web_service2.html">Services & Products</a>
+            <a href="web_pro1.html">Projects</a>
+            <a href="web_client.html">Clients</a>
+            <a href="Web_team.html">Team</a>
+        </div>
+       <p><b>Email: saleswe4u@outlook.com | Phone: +91 73033 87634, +91 73835 96544</b></p>
+       <p style:"color: blue;"><b>Location:</b> First Floor,B-108,Transport Nagar,Sector-69,Noida(U.P)</p>
+    </div>
+</div>
+
+<style>
+.myFooterBox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    /* 🔵 Light Blue Animated Background */
+    background: linear-gradient(90deg, #b3e5ff, #e7f9ff, #b3e5ff);
+    background-size: 300% 300%;
+    animation: myFooterAnim 5s infinite alternate;
+
+    /* 🔧 Footer Height (YOU CAN CHANGE THIS) */
+    padding: 5px 0;  /* Change this to make footer small or large */
+
+    text-align: center;
+    z-index: 999999; 
+    <!--font-family: Arial, sans-serif;-->
+    font-size: 8px;
+}
+
+@keyframes myFooterAnim {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.myFooterContent h4 {
+    margin: -10px 0;
+    font-size: 12px;
+    color: #003355;
+}
+
+.myFooterLinks a {
+    margin: 0 2px;
+    text-decoration: none;
+    color: #003355;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.myFooterContent p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #002233;
+}
+<!--*****************************************************************************************************************-->
+<!-- Next Page Button (Place anywhere in your HTML) -->
+<style>
+  /* Container to isolate the button */
+  #next-page-btn-container {
+    position: fixed;       /* Fix at viewport */
+    bottom: 20px;          /* Distance from bottom */
+    right: 20px;           /* Distance from right */
+    z-index: 9999;         /* Stay on top of other elements */
+  }
+
+  /* Small button styling */
+  #next-page-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+<!--***********************************************************************************************************************-->
+<div class="body-gap"></div>
+<!--***********************************************************************************************************************-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single HTML with Multiple Pages</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .page {
+      min-height: 100vh; /* Full screen height */
+      padding: 50px;
+      box-sizing: border-box;
+      width: 3500vh;
+    }
+
+    .page1 {
+      background-color: azure;
+    }
+
+   
+    h1 {
+      text-align: center;
+      color: orange;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- First Page -->
+  <div class="page page1">
+    <h1>Our Product Range</h1>
+   
+<!--********************************************************************************************************************
+
+<!-- PRODUCT RANGE SECTION -->
+<main class="right">
+  <section class="card" aria-labelledby="about-heading">
+
+    <style>
+      /* Bounce Animation */
+      .bounce-word {
+        display: inline-block;
+        animation: bounce 1s ease;
+        color: midnightblue;
+        font-size: 30px;
+      }
+
+      @keyframes bounce {
+        0%   { transform: translateY(20px); opacity: 0; }
+        50%  { transform: translateY(-10px); opacity: 1; }
+        100% { transform: translateY(0); }
+      }
+
+      /* TABLE STYLING */
+      .table-wrap {
+        width: 100%;
+        overflow-x: auto;
+        background: white;
+      }
+
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+      }
+
+      table th, table td {
+        border: 1px solid #c8c8c8;
+        padding: 12px;
+        vertical-align: top;
+      }
+
+      table th {
+        background: white;
+        color: #0a2c7d;
+        text-align: left;
+        font-size: 16px;
+       
+      }
+
+      table td {
+        font-size: 16px;
+      }
+
+      /* RESPONSIVE CARD */
+      .card {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    </style>
+
+    <!--<h2 style="text-align: center;"><span class="bounce-word">OUR PRODUCT RANGE</span></h2>-->
+  </section>
+
+  <!-- PRODUCT TABLE -->
+  <section class="card">
+    <!--<h2 style="margin:0 0 12px 0; font-size:16px; color: green;">Product List</h2>-->
+
+    <div class="table-wrap" role="region" aria-label="Product Table">
+      <table>
+        <thead>
+          <tr>
+            <th>ITEM</th>
+            <th>TYPE</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td style="color: orange;"><b>CONTROL SYSTEM</b></td>
+            <td>
+              <b style="color: black;">AUTOMATION CONTROLLERS:</b> From Small Scale Systems to Complete Process Plants<br><br>
+              <b style="color: black;">HMI/SCADA:</b> Human Machine Interface Systems (HMI to full DCS/SCADA)
+            </td>
+          </tr>
+
+          <tr>
+            <td style="color: orange;"><b>INSTRUMENTATION</b></td>
+            <td>
+              <b style="color: black;">LEVEL MEASUREMENT:</b> LT, LSH, LSL, GWR, NCR, Ultrasonic, Vibronic Level Switches, MLG<br><br>
+              <b style="color: black;">PRESSURE MEASUREMENT:</b> PT, DPT, PG<br><br>
+              <b style="color: black;">TEMPERATURE:</b> TT, RTD (Pt100), Thermocouples, TG<br><br>
+              <b style="color: black;">FLOW MEASUREMENT:</b> Vortex, Pressure Drop, Ultrasonic, Thermal, Optical, Electromagnetic, Mass Flowmeters<br><br>
+              <b style="color: black;">VALVES:</b> On-Off, Actuators, Batching, Control Valves, Pneumatic Valves<br><br>
+              <b style="color: black;">SENSORS:</b> Photoelectric, Inductive, Capacitive, Ultrasonic, Magnetic, Color, Vision Sensors, Pyrometers
+            </td>
+          </tr>
+
+          <tr>
+            <td style="color: orange;"><b>ELECTRICAL</b></td>
+            <td>
+              <b style="color: black;">MONITORING DEVICES:</b> Insulation, Voltage, Current, Earth Leakage, PTC Thermistor, Frequency Monitoring<br><br>
+              <b style="color: black;">POWER SUPPLIES & RELAYS:</b> SMPS, Slim Relays<br><br>
+              <b style="color: black;">TIMERS:</b> Digital, Electronic, Analog, Synchronous<br><br>
+              <b style="color: black;">DRIVES:</b> VFDs & Servo Drives (agitators, conveyors, etc.)<br><br>
+              <b style="color: black;">MOTORS:</b> Servo, Single Axis, Multi-Axis<br><br>
+              <b style="color: black;">PUMPS:</b> Centrifugal & AODD Pumps<br><br>
+              <b style="color: black;">WIRES:</b> Power, Control, Instrumentation & Communication Cables
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+<!--============================================================================================================================================================-->
+<!-- RIGHT-SIDE VERTICAL SCROLL IMAGES -->
+<div class="right-image-scroll">
+  <div class="scroll-box">
+    <img src="AB.jpg" alt="">
+    <img src="HMI.jpeg" alt="">
+    <img src="sensor.jpg" alt="">
+    <img src="lm.png" alt="">
+
+  </div>
+</div>
+
+<style>
+  /* Container that floats on the right of your table */
+  .right-image-scroll {
+    float: right;               /* Aligns to the right side */
+    width: 240px;               /* Set width of image box */
+    margin-top: -618px;
+    margin-right: 10px;          /* Space so it doesn't touch table */
+  }
+
+  /* Scrollable box */
+  .scroll-box {
+    height: 600px;              /* Visible height */
+    <!--overflow-y: auto;-->           /* Enables vertical scroll */
+    overflow-x: hidden;         /* No horizontal scroll */
+    <!--border: 3px solid #ccc;-->
+    <!--padding: 10px;-->
+    background: #f7f7f7;
+    box-sizing: border-box;
+    width: 300px;
+
+  }
+
+  /* Image styling */
+  .scroll-box img {
+    width: 80%;                /* Fit images inside box */
+    height: 150px;  
+  margin-bottom: 10px;
+    border-radius: 10px;
+ 
+
+  }
+
+  /* Clear float (avoids breaking layout below table) */
+  .right-image-scroll::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+</style>
+
+</main>
+
+
+
+  </div>
+
+  
+</body>
+</html>
+

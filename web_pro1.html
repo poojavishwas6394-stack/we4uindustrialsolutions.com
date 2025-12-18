@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+
+<!--********************************************************************************************************************-->
+
+<style>
+/* ======= FIXED TOP BAR ======= */
+.fixed-top-bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: lavender;
+    padding: 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 9999; /* ensures no effect on bottom code */
+   
+}
+
+/* ======= LOGO LEFT SIDE ======= */
+.ftb-logo {
+    height: 70px;
+}
+
+/* ======= CENTER BUTTONS ======= */
+.ftb-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: left;
+    text_size: 15px;
+    width: auto;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.ftb-btn {
+    background: linear-gradient(45deg, #a8d8ff, #4fa9ff);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    justify-content: flex-end;
+    
+}
+
+.ftb-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* ======= RIGHT SIDE ANIMATED NAME ======= */
+<!--.ftb-name {-->
+    <!--font-size: 22px;-->
+
+   <!-- font-weight: bold;-->
+
+   <!-- animation: popUpAnim 1.6s infinite ease-in-out;-->
+
+  <!--  text-align: center;-->
+
+}
+
+/* Animation */
+@keyframes popUpAnim {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.25); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.6; }
+}
+
+/* Add top space so bottom code is not hidden under fixed bar */
+.body-gap {
+    margin-top: 120px;
+}
+</style>
+
+<!-- ======= FIXED TOP BAR HTML ======= -->
+<div class="fixed-top-bar">
+
+    <!-- Left: LOGO -->
+    <img src="we4u.png" class="ftb-logo" alt="Logo">
+
+    <!-- Center: BUTTONS -->
+    <div class="ftb-buttons">
+        <a href="index.html" class="ftb-btn">HOME</a>
+        <a href="web_about1.html" class="ftb-btn">ABOUT</a>
+        <a href="web_service2.html" class="ftb-btn">SERVICES & PRODUCTS</a>
+        <a href="web_pro1.html" class="ftb-btn">PROJECTS</a>
+        <a href="web_client.html" class="ftb-btn">CLIENTS</a>
+         <a href="web_team.html" class="ftb-btn">TEAM</a>
+
+    </div>
+
+    <!-- Right: Animated Name -->
+    <!--<div class="ftb-name">WE4U INDUSTRIAL SOLUTIONS</div>-->
+
+</div>
+
+<!-- Gap so your bottom code is safe -->
+<div class="body-gap"></div>
+
+
+
+
+<!--************************************************************************************************************-->
+
+<!-- Fixed Animated Text (Top Right) -->
+<div class="fixed-animated-text">WE4U INDUSTRIAL SOLUTIONS</div>
+
+<style>
+.fixed-animated-text{
+  position: fixed;
+  top: 30px;             /* Distance from top */
+  right: 30px;           /* Distance from right */
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  z-index: 9999;         /* Always on top */
+  margin-top: -19px;
+  /* Continuous Animation */
+  animation: textAnim 1.8s infinite ease-in-out;
+}
+
+/* Keyframes for repeating animation */
+@keyframes textAnim {
+  0%{
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100%{
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+</style>
+
+
+<!--**************************************************************************************************************************************************-->
+<title>Animated Image and Text</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 50px;
+    background-color: white;
+  }
+
+  .image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-side img {
+    width: 600px;
+    height: 500px;
+    border-radius: 20px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .text-side {
+    flex: 1;
+  }
+
+  .text-side h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .text-side p {
+    font-size: 18px;
+    color: black;
+    line-height: 1.5;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive */
+  @media(max-width: 800px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .image-side img {
+      width: 350px;
+      height: 400px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="image-side">
+    <img src="greenf-news.jpg" alt="Animated Image">
+  </div>
+  <div class="text-side">
+    <h1 style= "color: midnightblue;"><b>GREEN FIELD PROJECT</b></h1>
+    <h2 style= "color: orange;">Building Industrial Excellence from the Ground Up............</h2>
+
+    <p>"At WE4U Industrial Solutions, we specialize in executing comprehensive greenfield projects, delivering end-to-end solutions tailored to your industrial vision."</p>
+      <p>"From concept design to commissioning, our team ensures efficiency, reliability, and sustainable practices in every project we undertake."</p>
+    <p>"We integrate cutting-edge automation, electrical, and instrumentation solutions to create high-performance industrial facilities."</p>
+    <p>"Our expertise in greenfield projects allows us to transform empty plots into fully operational, state-of-the-art industrial plants."</p>
+    <p>"WE4U Industrial Solutions is committed to quality, safety, and timely delivery, making us a trusted partner for new industrial ventures."</p>
+
+
+
+</div>
+</div>
+
+<!--**************************************************************************************************************************************-->
+<title>Animated Image and Text</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    gap: 50px;
+    background-color: white;
+  }
+
+  .image-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-side img {
+    width: 600px;
+    height: 600px;
+    border-radius: 20px;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .text-side {
+    flex: 1;
+  }
+
+  .text-side h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .text-side p {
+    font-size: 18px;
+    color: black;
+    line-height: 1.5;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive */
+  @media(max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .image-side img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="image-side">
+    <img src="brownf.jpg" alt="Animated Image">
+  </div>
+  <div class="text-side">
+    <h1 style= "color: midnightblue;"><b>BROWN FIELD PROJECT</b></h1>
+    <h2 style= "color: orange; font-family: italic;">Optimizing Existing Facilities for Maximum Performance............</h2>
+
+    <p>"WE4U Industrial Solutions specializes in brownfield projects, modernizing and optimizing existing industrial plants with minimal downtime."</p>
+      <p>"Our team brings expertise in automation, electrical, and instrumentation solutions to upgrade your facility efficiently and safely."</p>
+    <p>"From process optimization to system retrofits, we ensure improved productivity and extended equipment life."</p>
+    <p>"We deliver turnkey brownfield solutions, balancing innovation with practical implementation for seamless project execution."</p>
+    <p>"With WE4U Industrial Solutions, your existing industrial facility is transformed into a more efficient, reliable, and future-ready plant."</p>
+
+
+
+</div>
+</div>
+</body>
+
+
+
+
+
+
+</body>
+
+<!--******************************************************************************************************************************-->
+
+
+
+</html>
+
+<!--*********************************************************************************************************-->
+<a href="web_client.html" 
+   style="
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      font-size: 40px;
+      text-decoration: none;
+      color: blue;
+      cursor: pointer;
+   ">
+   &#8594;
+</a>
+<!--******************************************************************************************************-->
+<a href="web_service2.html" class="left-arrow">←</a>
+
+<style>
+.left-arrow {
+    position: fixed;
+    top: 50%;
+    left: 10px;        /* distance from left edge */
+    transform: translateY(-50%);
+    font-size: 40px;   /* arrow size */
+    text-decoration: none;
+    color: blue;      /* arrow color */
+    z-index: 9999;     /* stays above all elements */
+    cursor: pointer;
+}
+.left-arrow:hover {
+    color: blue;       /* hover color */
+}
+</style>
+
+
+<!--***************************************************************************************************************-->
+
+
+</style>
+<!-- ======= END FOOTER ======= -->
+<!--******************************************footer**********************************************-->
+<!-- ======= SAFE FIXED FOOTER (FULLY SEPARATE) ======= -->
+<!-- ======= SAFE FIXED FOOTER (FULLY SEPARATE) ======= -->
+<div class="myFooterBox">
+    <div class="myFooterContent">
+        <!--<h4>Your Company Name</h4>-->
+
+        <div class="myFooterLinks">
+            <a href="index.html">Home</a>
+            <a href="web_about1.html">About</a>
+            <a href="web_service2.html">Services & Products</a>
+            <a href="web_pro1.html">Projects</a>
+            <a href="web_client.html">Clients</a>
+            <a href="Web_team.html">Team</a>
+        </div>
+       <p><b>Email: saleswe4u@outlook.com | Phone: +91 73033 87634, +91 73835 96544</b></p>
+       <p style:"color: blue;">First Floor,B-108,Transport Nagar,Sector-69,Noida(U.P)</p>
+    </div>
+</div>
+
+<style>
+.myFooterBox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    /* 🔵 Light Blue Animated Background */
+    background: linear-gradient(90deg, #b3e5ff, #e7f9ff, #b3e5ff);
+    background-size: 300% 300%;
+    animation: myFooterAnim 5s infinite alternate;
+
+    /* 🔧 Footer Height (YOU CAN CHANGE THIS) */
+    padding: 8px 0;  /* Change this to make footer small or large */
+
+    text-align: center;
+    z-index: 999999; 
+    <!--font-family: Arial, sans-serif;-->
+}
+
+@keyframes myFooterAnim {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.myFooterContent h4 {
+    margin: 2px 0;
+    font-size: 10px;
+    color: #003355;
+}
+
+.myFooterLinks a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: #003355;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.myFooterContent p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    color: #002233;
+}
+</style>
+<!-- ======= END FOOTER ======= -->

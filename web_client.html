@@ -1,0 +1,440 @@
+
+<!--**************************************************************************************-->
+<html>
+
+
+<style>
+/* ======= FIXED TOP BAR ======= */
+.fixed-top-bar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: lavender;
+    padding: 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 9999; /* ensures no effect on bottom code */
+   
+}
+
+/* ======= LOGO LEFT SIDE ======= */
+.ftb-logo {
+    height: 70px;
+}
+
+/* ======= CENTER BUTTONS ======= */
+.ftb-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: left;
+    text_size: 15px;
+    width: auto;
+   align-items: center;
+ margin-right: 30px;
+}
+
+.ftb-btn {
+    background: linear-gradient(45deg, #a8d8ff, #4fa9ff);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+    justify-content: flex-end;
+    
+}
+
+.ftb-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* ======= RIGHT SIDE ANIMATED NAME ======= */
+<!--.ftb-name {-->
+    <!--font-size: 22px;-->
+
+   <!-- font-weight: bold;-->
+
+   <!-- animation: popUpAnim 1.6s infinite ease-in-out;-->
+
+  <!--  text-align: center;-->
+
+}
+
+/* Animation */
+@keyframes popUpAnim {
+    0% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.25); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.6; }
+}
+
+/* Add top space so bottom code is not hidden under fixed bar */
+.body-gap {
+    margin-top: 120px;
+}
+</style>
+
+<!-- ======= FIXED TOP BAR HTML ======= -->
+<div class="fixed-top-bar">
+
+    <!-- Left: LOGO -->
+    <img src="we4u.png" class="ftb-logo" alt="Logo">
+
+    <!-- Center: BUTTONS -->
+    <div class="ftb-buttons">
+        <a href="index.html" class="ftb-btn">HOME</a>
+        <a href="web_about1.html" class="ftb-btn">ABOUT</a>
+        <a href="web_service2.html" class="ftb-btn">SERVICES & PRODUCTS</a>
+        <a href="web_pro1.html" class="ftb-btn">PROJECTS</a>
+        <a href="web_client.html" class="ftb-btn">CLIENTS</a>
+         <a href="web_team.html" class="ftb-btn">TEAM</a>
+
+    </div>
+
+    <!-- Right: Animated Name -->
+    <!--<div class="ftb-name">WE4U INDUSTRIAL SOLUTIONS</div>-->
+
+</div>
+<!-- Gap so your bottom code is safe -->
+<div class="body-gap"></div>
+
+
+<!--***************************************************************************************************************************-->
+<!-- Fixed Animated Text (Top Right) -->
+<div class="fixed-animated-text">WE4U INDUSTRIAL SOLUTIONS</div>
+
+<style>
+.fixed-animated-text{
+  position: fixed;
+  top: 10px;             /* Distance from top */
+  right: 30px;           /* Distance from right */
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+  z-index: 9999;         /* Always on top */
+
+  /* Continuous Animation */
+  animation: textAnim 1.8s infinite ease-in-out;
+}
+
+/* Keyframes for repeating animation */
+@keyframes textAnim {
+  0%{
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100%{
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+</style>
+
+
+
+<!--***************************************************************************************************************************************-->
+<!--<html lang="en">-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Client Logos</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+    }
+
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Main container */
+    .logo-slider{
+        overflow: hidden;
+        white-space: nowrap;
+        border: 1px solid #ddd;
+        background: lightblue;
+        padding: 20px 0;
+        border-radius: 10px;
+    }
+
+    /* Animation track */
+    .logo-track{
+        display: inline-block;
+        animation: scroll 15s linear infinite;
+    }
+
+    /* Logo images */
+    .logo-track img{
+        width: 180px;
+        height: 150px;
+        object-fit: contain;
+        margin: 0 25px;
+        border-radius: 10px;
+        background: #ffffff;
+        padding: 10px;
+        box-shadow: light yellow;
+        transition: transform 0.3s;
+    }
+
+    /* Hover effect */
+    .logo-track img:hover{
+        transform: scale(1.1);
+    }
+
+    /* Scrolling animation */
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+</style>
+
+</head>
+<body>
+
+<h2 style= "text-size:30px; color: midnightblue;"><b>OUR CLIENTS</b></h2>
+
+<div class="logo-slider">
+    <div class="logo-track">
+        <!-- FIRST SET OF LOGOS -->
+        <img src="hal.png" alt="Client Logo">
+        <img src="dic.png" alt="Client Logo">
+        <img src="BK.png" alt="Client Logo">
+        <img src="dp.png" alt="Client Logo">
+        <img src="maha.png" alt="Client Logo">
+        <img src="sika.png" alt="Client Logo">
+        <img src="vb.png" alt="Client Logo">
+        <img src="wc.png" alt="Client Logo">
+        <img src="dabur.png" alt="Client Logo">
+        <img src="eve.jpeg" alt="Client Logo">
+        <img src="haryana.jpeg" alt="Client Logo">
+        <img src="vrs.jpeg" alt="Client Logo">
+        <img src="toyo.png" alt="Client Logo">
+        <img src="reps.jpeg" alt="Client Logo">
+        <img src="slmg.jpeg" alt="Client Logo">
+        <img src="aaxe.png" alt="Client Logo">
+
+ <!--****** DUPLICATE SET FOR SMOOTH LOOP *****-->
+
+         <img src="hal.png" alt="Client Logo">
+        <img src="dic.png" alt="Client Logo">
+        <img src="BK.png" alt="Client Logo">
+        <img src="dp.png" alt="Client Logo">
+        <img src="maha.png" alt="Client Logo">
+        <img src="sika.png" alt="Client Logo">
+        <img src="vb.png" alt="Client Logo">
+        <img src="wc.png" alt="Client Logo">
+        <img src="dabur.png" alt="Client Logo">
+        <img src="eve.jpeg" alt="Client Logo">
+        <img src="haryana.jpeg" alt="Client Logo">
+        <img src="vrs.jpeg" alt="Client Logo">
+        <img src="toyo.png" alt="Client Logo">
+        <img src="reps.jpeg" alt="Client Logo">
+        <img src="slmg.jpeg" alt="Client Logo">
+        <img src="aaxe.png" alt="Client Logo">
+
+    </div>
+</div>
+
+</body>
+<!--**********************************************************************************************************************************-->
+
+
+<!-- Bottom Horizontal Sliding Company Names -->
+<div style="margin-bottom: 70px;" class="bottom-horizontal-slider">
+    <div class="horizontal-slide-content">
+        Hindustan Aeronautics Ltd.|
+        DIC India Ltd.|
+        BEEKAY Steel Industries.|	
+        Dharampal Premchand Ltd.|	
+        Mahadhan Agritech Ltd.|	
+        Sika India Pvt.|	
+        Varun Bevrages Ltd.|	
+        Woodver Coatings Ltd.|	
+        Dabur India Ltd.|
+        Evershine Adhesive Ludiana.|	
+        Haryana Leather Chemicals.|	
+        VRS Food Ltd.|
+        TOYO Ink India Ltd.|	
+        REPS En-Tech Pvt. Ltd.|	
+        SLMG Beverages Pvt. Ltd.|	 
+        Aaxe Paints.| 
+   
+
+        Hindustan Aeronautics Ltd.|
+        DIC India Ltd.|
+        BEEKAY Steel Industries.|	
+        Dharampal Premchand Ltd.|	
+        Mahadhan Agritech Ltd.|	
+        Sika India Pvt.|	
+        Varun Bevrages Ltd.|	
+        Woodver Coatings Ltd.|	
+        Dabur India Ltd.|
+        Evershine Adhesive Ludiana.|	
+        Haryana Leather Chemicals.|	
+        VRS Food Ltd.|
+        TOYO Ink India Ltd.|	
+        REPS En-Tech Pvt. Ltd.|	
+        SLMG Beverages Pvt. Ltd.|	 
+        Aaxe Paints.|
+
+
+ </div>
+</div>
+
+<style>
+/* Fixed bottom bar - Safe, does NOT disturb existing layout */
+.bottom-horizontal-slider {
+    position: fixed;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    background: transparent;
+    z-index: 999999; /* keeps it above other content */
+}
+
+/* Sliding text from right → left */
+.horizontal-slide-content {
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    animation: slideRightLeft 10s linear infinite;
+    
+}
+
+/* Animation keyframes */
+@keyframes slideRightLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+</style>
+
+
+
+<!--*************************************************************-->
+
+
+<!--**************************************************************************************************************************************-->
+
+
+</html>
+<!--*****************************************************************************************************************************************************-->
+<a href="web_team.html" 
+   style="
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      font-size: 40px;
+      text-decoration: none;
+      color: blue;
+      cursor: pointer;
+   ">
+   &#8594;
+</a>
+<!--********************************************************************************************************************-->
+<a href="web_pro1.html" class="left-arrow">←</a>
+
+<style>
+.left-arrow {
+    position: fixed;
+    top: 50%;
+    left: 10px;        /* distance from left edge */
+    transform: translateY(-50%);
+    font-size: 40px;   /* arrow size */
+    text-decoration: none;
+    color: blue;      /* arrow color */
+    z-index: 9999;     /* stays above all elements */
+    cursor: pointer;
+}
+.left-arrow:hover {
+    color: blue;       /* hover color */
+}
+</style>
+<!--******************************************************************************************************************-->
+
+
+<!--******************************************footer**********************************************-->
+<!-- ======= SAFE FIXED FOOTER (FULLY SEPARATE) ======= -->
+<!-- ======= SAFE FIXED FOOTER (FULLY SEPARATE) ======= -->
+<div class="myFooterBox">
+    <div class="myFooterContent">
+        <!--<h4>Your Company Name</h4>-->
+
+        <div class="myFooterLinks">
+            <a href="index.html">Home</a>
+            <a href="web_about1.html">About</a>
+            <a href="web_service2.html">Services & Products</a>
+            <a href="web_pro1.html">Projects</a>
+            <a href="web_client.html">Clients</a>
+            <a href="Web_team.html">Team</a>
+        </div>
+       <p><b>Email: saleswe4u@outlook.com | Phone: +91 73033 87634, +91 73835 96544</b></p>
+       <p style:"color: blue;">First Floor,B-108,Transport Nagar,Sector-69,Noida(U.P)</p>
+    </div>
+</div>
+
+<style>
+.myFooterBox {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    /* 🔵 Light Blue Animated Background */
+    background: linear-gradient(90deg, #b3e5ff, #e7f9ff, #b3e5ff);
+    background-size: 300% 300%;
+    animation: myFooterAnim 5s infinite alternate;
+
+    /* 🔧 Footer Height (YOU CAN CHANGE THIS) */
+    padding: 18px 0;  /* Change this to make footer small or large */
+
+    text-align: center;
+    z-index: 999999; 
+    <!--font-family: Arial, sans-serif;-->
+}
+
+@keyframes myFooterAnim {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.myFooterContent h4 {
+    margin: 2px 0;
+    font-size: 10px;
+    color: #003355;
+}
+
+.myFooterLinks a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: #003355;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.myFooterContent p {
+    margin: 5px 0 0 0;
+    font-size: 13px;
+    color: #002233;
+}
+</style>
+<!-- ======= END FOOTER ======= -->

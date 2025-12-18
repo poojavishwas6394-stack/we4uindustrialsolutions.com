@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WE4U Industrial Solutions</title>
+  <style>
+    :root{
+      --bg1: #f7fbff;
+      --bg2: #f0f7f9;
+      --accent: #6aa6ff;
+      --accent-2: #8be3c2;
+      --muted: #6b7280;
+      --card: #ffffff;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#102a43}
+    a{color:inherit;text-decoration:none}
+
+    /* Container */
+    .wrap{min-height:100vh;display:flex;flex-direction:column}
+
+    /* Header / Nav */
+    header{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:20px 28px;backdrop-filter: blur(-10px);background:lavender;border-bottom:1px solid rgba(16,42,67,0.04);z-index:60}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:0 6px 18px rgba(106,166,255,0.18);transform:rotate(-8deg);}
+    .company{font-weight:700;font-size:40px;letter-spacing:0.2px}
+    nav{display:flex;gap:12px;align-items:center}
+    .cta{background:linear-gradient(90deg,var(--accent),#7dd3fc);padding:8px 14px;border-radius:10px;color:white;font-weight:600;box-shadow:0 8px 18px rgba(106,166,255,0.12);}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 480px;gap:40px;align-items:center;padding:120px 6vw 80px;max-width:1200px;margin:0 auto;width:100%}
+    .hero-left{max-width:680px}
+    .eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(139,227,194,0.25);color:#07624b;font-weight:700;margin-bottom:18px}
+    h1{font-size:44px;line-height:1.02;margin:0 0 16px}
+    .blink{display:inline-block;position:relative;padding:0 6px;border-radius:6px}
+    /* blinking/glow animation for company name */
+    .blink .dark{animation:blinker 3s linear infinite}
+    @keyframes blinker{0%{opacity:1;filter:drop-shadow(0 0 0 rgba(138,198,255,0.0))}40%{opacity:1;filter:drop-shadow(0 10px 28px rgba(138,198,255,0.14))}100%{opacity:0.9;filter:drop-shadow(0 12px 40px rgba(138,198,255,0.10))}}
+
+    p.lead{color:var(--muted);font-size:16px;margin:0 0 22px}
+    .actions{display:flex;gap:12px;align-items:center}
+    .btn{padding:10px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#60c7ff);color:white;box-shadow:0 10px 30px rgba(106,166,255,0.12)}
+    .btn-ghost{background:transparent;border:1px solid rgba(16,42,67,0.08);color:var(--muted)}
+
+    /* Right hero card with quarter-circle image placeholders */
+    .hero-card{background:var(--card);padding:26px;border-radius:18px;box-shadow:0 18px 40px rgba(16,42,67,0.06);position:relative;overflow:hidden}
+    .qrow{display:flex;gap:14px}
+    .qcell{flex:1;min-height:140px;border-radius:12px;background:linear-gradient(180deg,rgba(235,247,255,1),rgba(248,255,250,1));display:flex;align-items:center;justify-content:center;position:relative}
+    .quarter{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#fff,#e8f7ff);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(106,166,255,0.06)}
+
+    /* Animated floating shapes */
+    .float{position:absolute;width:260px;height:260px;border-radius:36px;background:linear-gradient(135deg,rgba(106,166,255,0.18),rgba(139,227,194,0.12));filter:blur(26px);z-index:0;transform:translate3d(0,0,0);animation:floaty 9s ease-in-out infinite}
+    .float.two{width:200px;height:200px;left:auto;right:-40px;top:60px;background:linear-gradient(135deg,rgba(139,227,194,0.16),rgba(106,166,255,0.12));animation-duration:11s}
+    @keyframes floaty{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(6deg)}100%{transform:translateY(0) rotate(0deg)}}
+
+    /* About (bottom) */
+    .spacer{flex:1}
+    footer.about{background:linear-gradient(90deg, #b3e5ff, #e7f9ff, #b3e5ff);padding:45px 8vw;border-top:1px solid rgba(16,42,67,0.03)}
+    .about-inner{max-width:1100px;margin:0 auto;display:flex;gap:50px;align-items:flex-start}
+    .about-card{flex:1;background:azure;padding:26px;border-radius:12px;box-shadow:0 8px 26px rgba(16,42,67,0.04)}
+    .social{display:flex;gap:12px;margin-top:14px}
+    .social a{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:rgba(16,42,67,0.03);text-decoration:none}
+    .social svg{width:20px;height:20px;display:block}
+
+    /* Responsive */
+    @media(max-width:920px){
+      .hero{grid-template-columns:1fr; padding-top:110px}
+      .hero-card{order:2}
+      header{padding:12px 16px}
+      h1{font-size:34px}
+    }
+
+    /* small niceties */
+    .muted{color:var(--muted)}
+    .powered{font-size:13px;color:var(--muted);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <!--<div class="logo"><img scr="we.jpg;"></div>-->
+<img style="width: 110px;"src="we4u.png">
+        <div>
+          <div style="color: orange;" class="company"><b>WE4U Industrial Solutions</b></div>
+          <div style="text-align:left;"class="powered"><b>Engineering • Projects • Services</b></div>
+        </div>
+      </div>
+      <nav>
+  <a href="index.html" class="cta">HOME</a>
+ <a href="web_about1.html" class="cta">ABOUT</a>
+ <a href="web_service2.html" class="cta">SERVICE & PRODUCTS</a>
+ <a href="web_pro1.html" class="cta">PROJECTS</a>
+<a href="web_client.html" class="cta">CLIENTS</a>
+<a href="web_team.html" class="cta">TEAM</a>
+     
+ </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Intro">
+        <div style="text-align:left;"class="hero-left">
+          <div class="eyebrow"><b>Industrial • Electrical • Automation</b></div>
+          <h1 style="text-align:left;">
+            Reliable industrial solutions by&nbsp;
+            <span class="blink" aria-hidden="true"><span class="dark">WE4U</span></span>
+          </h1>
+          <p style="text-align:left;"class="lead"><b>We design, implement and maintain electrical & automation projects for greenfield and brownfield industries. Clean, safe and timely delivery — engineered for performance.</b></p>
+          <div class="actions">
+            <button class="btn btn-primary" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About Us</button>
+            <button class="btn btn-ghost" onclick="window.location.href='#contact'">Get In Touch</button>
+          </div>
+        </div>
+
+        <div class="hero-card" role="region" aria-label="Highlights card">
+          <div class="float" style="left:-90px;top:-50px"></div>
+          <div class="float two" style="right:-50px;bottom:-60px"></div>
+
+          <div style="position:relative;z-index:2">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+              <div style="font-weight:700;color:maroon">Our Expertise</div>
+              <div class="muted" style="font-size:13px;color:black;"><b>Trusted by industry partners</b></div>
+            </div>
+
+            <div class="qrow">
+              <div class="qcell">
+                <div style="text-align:center">
+                  <div style="font-size: 50px;" class="quarter">⚡</div>
+                  <div class="muted" style="margin-top:10px;color:midnightblue;"><b>Electrical Design</b></div>
+                </div>
+              </div>
+
+              <div class="qcell">
+                <div style="text-align:center">
+                  <div style="font-size: 50px;" class="quarter">🛠️</div>
+                  <div class="muted" style="margin-top:10px;color:midnightblue;"><b>Installation</b></div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:12px;margin-top:18px">
+              <div class="qcell" style="flex:1;min-height:86px;border-radius:10px;padding:10px;align-items:center;display:flex;justify-content:center">
+                <div style="text-align:center">
+ <div style="font-size: 50px;" class="quarter">🤖</div>
+                  <div style="font-weight:700;color:midnightblue;">Automation</div>
+                  <div class="muted" style="font-size:13px"><b>PLC / SCADA</b></div>
+                </div>
+              </div>
+
+              <div class="qcell" style="flex:1;min-height:86px;border-radius:10px;padding:10px;align-items:center;display:flex;justify-content:center">
+                <div style="text-align:center">
+<div style="font-size: 50px;" class="quarter">⚙</div>
+                  <div style="font-weight:700;color:midnightblue;">Maintenance</div>
+                  <div class="muted" style="font-size:13px"><b>O&M / Support</b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div style="background:lavender;"class="spacer"></div>
+
+      <footer id="about" class="about" aria-label="About WE4U">
+        <div class="about-inner">
+          <div style="padding: 45px 150px;text-align:left;"class="about-card">
+            <h3 style="margin-top:0;color:orange;"><b>About WE4U Industrial Solutions</b></h3>
+            <p style="color:midnightblue;font-size:16px;font-style:cursive;"class="muted"><b>WE4U Industrial Solutions provides end-to-end electrical & automation services for greenfield and brownfield projects. We focus on safety, efficiency, and long-term reliability — delivering projects with skilled engineers, modern tools and a customer-first approach.</b></p>
+            <p style="color:black;"class="muted">Headquartered in Noida(India), we serve manufacturing, processing, and infrastructure clients with tailored solutions including design, installation, automation and long-term maintenance contracts.</p>
+
+            <div style="margin-top:18px">
+              <strong>Connect with us</strong>
+              <div class="social" style="margin-top:10px;">
+               <!--<a href="" target="_blank" aria-label="https:"https://www.instagram.com/">-->
+                  <!--<i class="fab fa-instagram" style="font-size:40px; color:#E1306C;"></i>-->
+                  <!--<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.12 8.5H13.5V7.1c0-.5.3-.6.6-.6h1.2V4.1h-1.6c-2.1 0-3 1.2-3 3.1V8.5H9.9v2.3h1.7V20h2.4v-9.2h1.6l.7-2.3z" fill="#1877F2"/></svg>-->
+                </a>
+                <a href="https://www.linkedin.com/company/we4u-industrial/?originalSubdomain=in" target="_blank" aria-label="LinkedIn link">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM0 8h5V24H0zM8 8h4.8v2.2h.06c.67-1.26 2.3-2.6 4.74-2.6C23.6 7.6 24 12 24 16.6V24H19v-6.8c0-1.6 0-3.6-2.2-3.6-2.2 0-2.6 1.8-2.6 3.5V24H8V8z" fill="#0A66C2"/></svg>
+                </a>
+                <a href="https://www.instagram.com/we4uindustrial0001/" target="_blank" aria-label="Instagram link">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 7.5A4.5 4.5 0 016.5 3h11A4.5 4.5 0 0122 7.5v9A4.5 4.5 0 0117.5 21h-11A4.5 4.5 0 012 16.5v-9z" fill="#E1306C"/></svg>
+                </a>
+                <a href="saleswe4u@outlook.com" aria-label="Email link">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 6.5l10 6 10-6v11a2 2 0 01-2 2H4a2 2 0 01-2-2v-11z" fill="#374151"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div style="width:320px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;text-align:left;">
+            <div class="about-card" style="padding:18px;color:green;width:400px;">
+              <strong>Quick Contact</strong>
+              <p class="muted" style="margin:8px 0 0;color:black;text-align:left;">Phone: <b>+91 73033 87634</b></p>
+              <p class="muted" style="margin:8px 0 0;color:black;text-align:left;">Phone: <b>+91 73835 96544</b></p>
+              <p class="muted" style="margin:6px 0 0;color:blue;text-align:left;">Email:<b>saleswe4u@outlook.com</b></p>
+              <a id="contact" href="saleswe4u@outlook.com" class="btn btn-primary" style="margin-top:12px;display:inline-block;color:midnightblue;text-align:center">Email Us</a>
+            </div>
+
+            <div class="about-card" style="padding:18px;text-align:left;width:400px;">
+              <strong style="color:green;">Office</strong>
+              <p class="muted" style="margin:8px 0 0;color:blue;"><b>First Floor,B-108,Sec-69,Noida(U.P)</b></p>
+              <!--<p class="muted" style="margin:8px 0 0;color:black"><b>Sec-69,Noida(U.P)</b></p>-->
+              <p class="muted" style="margin:4px 0 0;color:midnightblue;"><b>Serving clients across India</b></p>
+              <!--<p>-->
+    Our office is located at 
+    <a href="https://www.google.com/maps/place/WE4U+Industrial+Solutions/@28.6105275,77.3910307,728m/data=!3m3!1e3!4b1!5s0x390cef916fac8255:0x551ea06ecdf39b9a!4m6!3m5!1s0x390cefb9931e9143:0xf8845295540e8a44!8m2!3d28.6105228!4d77.3936056!16s%2Fg%2F11vsnvl09r?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" target="_blank">
+         <b>Transport Nagar,Noida(Uttar Pradesh)</b> (Open in Google Maps)
+<button style="padding:10px 20px; font-size:18px; border-radius:10px; cursor:pointer;color:red">
+    📍 <b>Location</b>
+</button>
+
+    </a>.
+</p>
+
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+
+  <script>
+    // Small UX: keyboard focus visible styles
+    (function(){
+      function handleFirstTab(e){
+        if(e.key==='Tab')document.body.classList.add('user-is-tabbing');
+      }
+      window.addEventListener('keydown',handleFirstTab,{once:true});
+
+      // simple intersection animation for hero elements
+      const hero = document.querySelector('.hero-left');
+      if(hero){
+        hero.style.opacity=0;hero.style.transform='translateY(10px)';
+        window.addEventListener('load',()=>{setTimeout(()=>{hero.style.transition='all 700ms cubic-bezier(.2,.9,.3,1)';hero.style.opacity=1;hero.style.transform='translateY(0)';},200)})
+      }
+    })();
+  </script>
+</body>
+<!--**********************************************************************************************-->
+
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Scrolling Pagination</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .pagination {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .pagination a {
+        color: #333;
+        float: left;
+        padding: 10px 18px;
+        text-decoration: none;
+        margin: 5px;
+        border-radius: 8px;
+        background: lightblue;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+
+    .pagination a:hover {
+        background: #bcd1ff;
+        transform: scale(1.1);
+    }
+
+    .pagination a.active {
+        background: #4e8cff;
+        color: white;
+    }
+
+    .pagination a.disabled {
+        pointer-events: none;
+        background: #ccc;
+    }
+</style>
+</head>
+<body>
+
+<!--*****************************************************************************************************************************************************-->
+<a href="web_about1.html" 
+   style="
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      font-size: 40px;
+      text-decoration: none;
+      color: blue;
+      cursor: pointer;
+   ">
+   &#8594;
+</a>
+
+
+
+
+</html>
